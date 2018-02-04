@@ -84,22 +84,27 @@ void init_target_properties()
 
     std::string bootloader = GetProperty("ro.bootloader", "");
 
-    if (bootloader.find("N9005") == 0) {
-        /* hltexx */
-        property_override("ro.build.fingerprint", "samsung/hltexx/hlte:5.0/LRX21V/N9005XXSGBQD5:user/release-keys");
-        property_override("ro.build.description", "hltexx-user 5.0 LRX21V N9005XXSGBQD5 release-keys");
-        property_override("ro.product.model", "SM-N9005");
-        property_override("ro.product.device", "hlte");
-        gsm_properties("gsm");
-    } else if (bootloader.find("N900P") == 0) {
-        /* hltespr - Sprint */
-        property_override("ro.build.fingerprint", "samsung/hltespr/hltespr:5.0/LRX21V/N900PVPSEPL1:user/release-keys");
-        property_override("ro.build.description", "hltespr-user 5.0 LRX21V N900PVPSEPL1 release-keys");
-        property_override("ro.product.model", "SM-N900P");
-        property_override("ro.product.device", "hltespr");
-        cdma_properties("Sprint", "310120", "8", "1", "spr");
-    } else {
-        gsm_properties("gsm");
+    if (bootloader.find("N900K") == 0) {
+        /* hltektt - KT Corp (formerly Korea Telecom) */
+        property_override("ro.build.fingerprint", "samsung/hltektt/hltektt:5.0/LRX21V/N900KKKU0GOC4:user/release-keys");
+        property_override("ro.build.description", "hltektt-user 5.0 LRX21V N900KKKU0GOC4 release-keys");
+        property_override("ro.product.model", "SM-N900K");
+        property_override("ro.product.device", "hltektt");
+        gsm_properties("ktt");
+    } else if (bootloader.find("N900L") == 0) {
+        /* hltelgt - LG Uplus */
+        property_override("ro.build.fingerprint", "samsung/hltelgt/hltelgt:5.0/LRX21V/N900LKLU0GPI1:user/release-keys");
+        property_override("ro.build.description", "hltelgt-user 5.0 LRX21V N900LKLU0GPI1 release-keys");
+        property_override("ro.product.model", "SM-N900L");
+        property_override("ro.product.device", "hltelgt");
+        gsm_properties("lgt");
+    } else if (bootloader.find("N900S") == 0) {
+        /* hlteskt - SK Telecom */
+        property_override("ro.build.fingerprint", "samsung/hlteskt/hlteskt:5.0/LRX21V/N900SKSU0GPI1:user/release-keys");
+        property_override("ro.build.description", "hlteskt-user 5.0 LRX21V N900SKSU0GPI1 release-keys");
+        property_override("ro.product.model", "SM-N900S");
+        property_override("ro.product.device", "hlteskt");
+        gsm_properties("skt");
     }
 
     std::string device = GetProperty("ro.product.device", "");
