@@ -28,5 +28,8 @@ TARGET_KERNEL_CONFIG := lineage_hltekor_defconfig
 # NFC
 include $(COMMON_PATH)/nfc/bcm2079x/board.mk
 
+# Properties
+TARGET_SYSTEM_PROP += device/samsung/hltekor/system.prop
+
 # inherit from the proprietary version
 -include vendor/samsung/hltekor/BoardConfigVendor.mk
