@@ -20,6 +20,7 @@ set -e
 
 export DEVICE=hltekor
 export DEVICE_COMMON=hlte-common
+export VARIANT_COPYRIGHT_YEAR=2018
 export VENDOR=samsung
 
 ./../$DEVICE_COMMON/extract-files.sh $@

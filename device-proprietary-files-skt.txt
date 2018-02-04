@@ -1,0 +1,2 @@
+# Radio - pinned to N900SKSU0GPI1_N900SSKT0GPI1_SKT
+lib/libsec-ril.so:vendor/lib/libsec-ril.skt.so|7d1f14df220f24818b26040ea7d2a6ae3451a891

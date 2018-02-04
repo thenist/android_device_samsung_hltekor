@@ -1,0 +1,2 @@
+# Radio - pinned to N900LKLU0GPI1_N900LLGT0GPI1_LUC
+lib/libsec-ril.so:vendor/lib/libsec-ril.lgt.so|b360f60033d0888b86e1c1ffdd05ad05d02ee4e6

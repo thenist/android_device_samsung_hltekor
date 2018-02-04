@@ -1,0 +1,2 @@
+# Radio - pinned to N900KKKU0GOC4_N900KKTT0GOC4_KTC
+lib/libsec-ril.so:vendor/lib/libsec-ril.ktt.so|001df621f7b3dbdd2b3416aacd1711d4937f987b
