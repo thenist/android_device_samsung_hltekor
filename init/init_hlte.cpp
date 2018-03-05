@@ -39,20 +39,6 @@
 using android::base::GetProperty;
 using android::init::property_set;
 
-void set_rild_libpath(char const *variant)
-{
-    std::string libpath("/system/vendor/lib/libsec-ril.");
-    libpath += variant;
-    libpath += ".so";
-
-    property_override("rild.libpath", libpath.c_str());
-}
-
-void gsm_properties(char const *rild_lib_variant)
-{
-    set_rild_libpath(rild_lib_variant);
-}
-
 void init_target_properties()
 {
     std::string platform = GetProperty("ro.board.platform", "");
@@ -67,21 +53,18 @@ void init_target_properties()
         property_override("ro.build.description", "hltektt-user 5.0 LRX21V N900KKKU0GOC4 release-keys");
         property_override("ro.product.model", "SM-N900K");
         property_override("ro.product.device", "hltektt");
-        gsm_properties("ktt");
     } else if (bootloader.find("N900L") == 0) {
         /* hltelgt - LG Uplus */
         property_override("ro.build.fingerprint", "samsung/hltelgt/hltelgt:5.0/LRX21V/N900LKLU0GPI1:user/release-keys");
         property_override("ro.build.description", "hltelgt-user 5.0 LRX21V N900LKLU0GPI1 release-keys");
         property_override("ro.product.model", "SM-N900L");
         property_override("ro.product.device", "hltelgt");
-        gsm_properties("lgt");
     } else if (bootloader.find("N900S") == 0) {
         /* hlteskt - SK Telecom */
         property_override("ro.build.fingerprint", "samsung/hlteskt/hlteskt:5.0/LRX21V/N900SKSU0GPI1:user/release-keys");
         property_override("ro.build.description", "hlteskt-user 5.0 LRX21V N900SKSU0GPI1 release-keys");
         property_override("ro.product.model", "SM-N900S");
         property_override("ro.product.device", "hlteskt");
-        gsm_properties("skt");
     }
 
     std::string device = GetProperty("ro.product.device", "");
