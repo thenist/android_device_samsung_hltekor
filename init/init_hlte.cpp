@@ -51,20 +51,20 @@ void init_target_properties()
         /* hltektt - KT Corp (formerly Korea Telecom) */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/hltektt/hltektt:5.0/LRX21V/N900KKKU0GOC4:user/release-keys");
         property_override("ro.build.description", "hltektt-user 5.0 LRX21V N900KKKU0GOC4 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N900K");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "hltektt");
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-N900K");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "hltektt");
     } else if (bootloader.find("N900L") == 0) {
         /* hltelgt - LG Uplus */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/hltelgt/hltelgt:5.0/LRX21V/N900LKLU0GPI1:user/release-keys");
         property_override("ro.build.description", "hltelgt-user 5.0 LRX21V N900LKLU0GPI1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N900L");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "hltelgt");
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-N900L");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "hltelgt");
     } else if (bootloader.find("N900S") == 0) {
         /* hlteskt - SK Telecom */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/hlteskt/hlteskt:5.0/LRX21V/N900SKSU0GPI1:user/release-keys");
         property_override("ro.build.description", "hlteskt-user 5.0 LRX21V N900SKSU0GPI1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N900S");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "hlteskt");
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-N900S");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "hlteskt");
     }
 
     std::string device = GetProperty("ro.product.device", "");
