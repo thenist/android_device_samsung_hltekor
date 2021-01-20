@@ -14,9 +14,9 @@
 # limitations under the License.
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 $(call inherit-product, device/samsung/hltekor/full_hlte.mk)
 
 PRODUCT_DEVICE := hltekor
-PRODUCT_NAME := lineage_hltekor
+PRODUCT_NAME := aosp_hltekor
